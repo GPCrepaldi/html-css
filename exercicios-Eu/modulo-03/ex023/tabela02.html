@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treinando tabelas</title>
+    <title>Treinando Tabelas Grandes</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -11,15 +11,39 @@
 
         table {
             width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
         }
 
         td, th {
             border: 1px solid black;
+            padding: 10px;
         }
 
         thead, tfoot {
-            background-color: grey;
+            background-color: rgb(76, 75, 75);
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: rgb(76, 75, 75);
+        }
+
+        tbody > tr:nth-child(even) { /* 2n */
+            background-color: white;
+            font-weight: bold;
+        }
+
+        tbody > tr:nth-child(odd) { /* 2n-1 */
+            background-color: lightgray;
         }
 
         td.num {
@@ -29,64 +53,66 @@
 </head>
 <body>
 
-    <h1>Estudos de tabela</h1>
+    <h1>Estudos de Tabela Grandes</h1>
 
     <table>
 
+        <caption>População da Unidades Federativas</caption>
+
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-                <td>São Paulo</td>
+                <td scope="row">São Paulo</td>
                 <td class="num">44 420 459</td>
             </tr>
             <tr>
-                <td>Minas Gerais</td>
+                <td scope="row">Minas Gerais</td>
                 <td class="num">20 538 718</td>
             </tr>
             <tr>
-                <td>Rio de Janeiro</td>
+                <td scope="row">Rio de Janeiro</td>
                 <td class="num">16 054 524</td>
             </tr>
             <tr>
-                <td>Bahia</td>
+                <td scope="row">Bahia</td>
                 <td class="num">14 136 417</td>
             </tr>
             <tr>
-                <td>Paraná</td>
+                <td scope="row">Paraná</td>
                 <td class="num">11 443 208</td>
             </tr>
             <tr>
-                <td>Rio Grande do Sul</td>
+                <td scope="row">Rio Grande do Sul</td>
                 <td class="num">10 880 506</td>
             </tr>
             <tr>
-                <td>Pernambuci</td>
+                <td scope="row">Pernambuci</td>
                 <td class="num">9 058 155</td>
             </tr>
             <tr>
-                <td>Ceará</td>
+                <td scope="row">Ceará</td>
                 <td class="num">8 791 688</td>
             </tr>
             <tr>
-                <td>Pará</td>
+                <td scope="row">Pará</td>
                 <td class="num">8 116 132</td>
             </tr>
             <tr>
-                <td>Santa Catarina</td>
+                <td scope="row">Santa Catarina</td>
                 <td class="num">7 609 601</td>
             </tr>
             <tr>
-                <td>Goiás</td>
+                <td scope="row">Goiás</td>
                 <td class="num">7 055 228</td>
             </tr>
             <tr>
-                <td>Maranhão</td>
+                <td scope="row">Maranhão</td>
                 <td class="num">6 775 152</td>
             </tr>
 
@@ -100,5 +126,30 @@
         </tfoot>
 
     </table>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit ducimus eaque velit! Fugit animi id debitis. Fugit magni ea ab? Quod minima illum accusantium voluptas alias dolor, fuga cupiditate expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae facilis fuga ratione officia mollitia vel iure accusamus ad eligendi at iusto nisi sint dolore voluptas, suscipit, ea dolor dicta maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dignissimos, molestiae eos quam eius corrupti omnis quasi aut minima facere, praesentium voluptatem accusantium, impedit et dolores ab culpa sed natus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa doloribus rerum praesentium a quia autem, quibusdam repudiandae laboriosam quae! Excepturi minus saepe facilis veniam quidem distinctio porro labore quam perferendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur exercitationem assumenda, facilis inventore possimus laborum dolor soluta perspiciatis magnam, nihil amet voluptates autem dolorem reprehenderit laboriosam saepe fuga ipsam impedit?
+    </p>
+    
 </body>
 </html>
